@@ -1,0 +1,154 @@
+:root {
+  --card-bg: #212936;
+  --lightblue: #DEE9FC;
+  --lightpink: #FBE5E6;
+  --lightyellow: #FCEED8;
+  --title: #E5E7EB;
+  --subtitle: #9DA3AE;
+  --card-text: #D2D5DA;
+  --black: #121826;
+
+  --heading: 2.5rem;
+  --subheading: 1.25rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  background-image: url(resources/Background_image@2x.png);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-color: var(--black);
+  color: var(--card-text);
+}
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: var(--heading);
+  color: var(--title);
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--subtitle);
+  font-weight: 400;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.card span {
+  padding: 1rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.card span.yellow {
+  background-color: var(--lightyellow);
+}
+
+.card span.blue {
+  background-color: var(--lightblue);
+}
+
+.card span.pink {
+  background-color: var(--lightpink);
+}
+
+.card h2 {
+  font-size: var(--subheading);
+  color: var(--title);
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 75%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.author-info {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.author-info a {
+  color: var(--title);
+}
+
+@media (min-width: 640px) {
+  .cards-container {
+    align-items: center;
+  }
+
+  .card {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    width: 50%;
+    margin: auto;
+  }
+
+  .cards-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    max-width: 35%;
+    min-height: 480px;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    width: 35%;
+  }
+
+  .card {
+    max-width: 25%;
+  }
+
+  .author-info {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+  }
+}
